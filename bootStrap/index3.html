@@ -18,67 +18,50 @@
             max-width: 1324px;
         }
 
-        .col-xl-6.col-right {
-            width: 652px;
+        .col-right-content {
             height: 500px;
         }
 
-        .col-xl-6.col-left {
-            width: 672px;
-        }
-
-        .col-xl-6.col-left-right {
-            width: 316px;
-            height: 500px;
-            margin: 0 20px;
-        }
-
-        .col-xl-6.col-left-left {
-            width: 316px;
+        .col-left-right-content {
             height: 500px;
         }
 
-        @media screen and (max-width: 1401px) {
+        .col-left-left-content {
+            height: 500px;
+        }
+
+        @media only screen and (max-width: 1401px) {
             .container {
                 max-width: 1180px;
             }
+        }
 
-            .col-xl-6.col-right {
-                width: 580px;
+        @media only screen and (max-width: 1201px) {
+            .container {
+                max-width: 960px;
             }
 
-            .col-xl-6.col-left {
-                width: 600px;
+            .col-left-right{
+                padding: 0;
+                margin-bottom: 30px;
             }
 
-            .col-xl-6.col-left-right {
-                width: 280px;
-            }
-
-            .col-xl-6.col-left-left {
-                width: 280px;
+            .col-left-left{
+                padding: 0;
             }
         }
 
-        @media screen and (max-width: 1200px) {
+        @media only screen and (max-width: 769px) {
             .container {
-                max-width: 972px;
+                max-width: 540px;
             }
 
-            .col-xl-6.col-right {
-                width: 636px;
+            .col-right{
+                padding: 0;
             }
 
-            .col-xl-6.col-left {
-                width: 600px;
-            }
-
-            .col-xl-6.col-left-right {
-                width: 280px;
-            }
-
-            .col-xl-6.col-left-left {
-                width: 280px;
+            .col-left{
+                padding: 0;
             }
         }
     </style>
@@ -88,11 +71,17 @@
     <main class="container-fluid">
         <div class="container p-0">
             <div class="row  w-100 m-0">
-                <div class="col-12 col-md-6 col-xl-6 bg-primary col-right p-0"></div>
-                <div class="col-12 col-md-6 col-xl-6 p-0 col-left">
-                    <div class="row w-100 m-0">
-                        <div class="col-12 col-xl-6 bg-danger p-0 col-left-right"></div>
-                        <div class="col-12 col-xl-6 bg-warning p-0 col-left-left"></div>
+                <div class="col-12 col-md-6 col-xl-6 ps-xl-0 col-right">
+                    <div class="col-right-content bg-primary"></div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-6 col-left pe-0">
+                    <div class="row m-0">
+                        <div class="col-12 col-xl-6 col-left-right ps-0 pe-xl-0.25">
+                            <div class="col-left-right-content bg-danger"></div>
+                        </div>
+                        <div class="col-12 col-xl-6 col-left-left pe-xl-0">
+                            <div class="col-left-left-content bg-warning"></div>
+                        </div>
                     </div>
                 </div>
             </div>
