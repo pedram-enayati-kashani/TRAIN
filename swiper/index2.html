@@ -1,108 +1,86 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="./swiper-bundle.min.css">
-    <style>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-        * {
-        box-sizing: border-box;
-        }
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
 
-        body {
-        font-family: sans-serif;
-        margin: 0;
-        color: #fff;
-        }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
 
-        .container {
-        width: 75%;
-        margin: 0 auto;
-        background-color: #f005;
-        }
+    .swiper {
+      width: 50%;
+      height: 25%;
+    }
 
-        .swiper-block {
-        margin-top: 10px;
-        overflow: hidden;
-        }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .swiper-container {
-        width: calc(50% + 50vw);
-        height: 200px;
-        }
-
-        .swiper-slide {
-        width: 24%;
-        background: #4caf50;
-        padding: 10px;
-        border-radius: 20px;
-        text-align: center;
-        opacity: 0.8;
-        }
-
-        .swiper-slide:nth-child(even) {
-        background: #673ab7;
-        }
-
-        .swiper-pagination {
-        width: calc((100% - 50vw) * 2) !important;
-        }
-
-    </style>
-    <title>Document</title>
+    .swiper-slide {
+      width: 80%;
+    }
+  </style>
 </head>
+
 <body>
-    <main class="container">
-        <div class="swiper-block">
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
 
-            <div class="container">
-              <!-- Swiper -->
-              <div class="swiper-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">Slide 1</div>
-                  <div class="swiper-slide">Slide 2</div>
-                  <div class="swiper-slide">Slide 3</div>
-                  <div class="swiper-slide">Slide 4</div>
-                  <div class="swiper-slide">Slide 5</div>
-                  <div class="swiper-slide">Slide 6</div>
-                  <div class="swiper-slide">Slide 7</div>
-                  <div class="swiper-slide">Slide 8</div>
-                  <div class="swiper-slide">Slide 9</div>
-                  <div class="swiper-slide">Slide 10</div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-                
-                <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-              </div>
-            </div>
-          
-          </div>
-    </main>
-    <script src="./swiper-bundle.min.js"></script>
-    <script src="./bootstrap.bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper(".swiper-container", {
-        slidesPerView: "auto",
-        spaceBetween: 20,
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      autoplay: {
+        delay: 2500,
+        },
         loop:true,
-        autoplay: {
-            delay: 2500,
-        },
-        cssMode: true,
         pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            type: "fraction",
-        }, navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        });
-
-    </script>
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 </body>
+
 </html>
